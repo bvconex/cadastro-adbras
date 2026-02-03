@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Membro - ADBrás</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f4f4f9; padding: 20px; }
+        .container { max-width: 600px; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin: auto; }
+        h2 { color: #1a3a5a; text-align: center; border-bottom: 2px solid #1a3a5a; padding-bottom: 10px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #333; }
+        input, select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background-color: #1a3a5a; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; margin-top: 10px; }
+        button:hover { background-color: #2a4d7d; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Ficha de Cadastro - ADBrás</h2>
+    <form action="https://formspree.io/f/mrelwvol" method="POST" enctype="multipart/form-data">
+        
+        <div class="form-group">
+            <label>Nome Completo:</label>
+            <input type="text" name="nome" required>
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+            <div class="form-group" style="flex: 1;">
+                <label>Nome do Pai:</label>
+                <input type="text" name="pai">
+            </div>
+            <div class="form-group" style="flex: 1;">
+                <label>Nome da Mãe:</label>
+                <input type="text" name="mae">
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+            <div class="form-group" style="flex: 1;">
+                <label>Data Nascimento:</label>
+                <input type="date" name="nascimento" required>
+            </div>
+            <div class="form-group" style="flex: 1;">
+                <label>Nacionalidade:</label>
+                <input type="text" name="nacionalidade" value="Brasileira">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>CPF:</label>
+            <input type="text" name="cpf" placeholder="000.000.000-00" required>
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+            <div class="form-group" style="flex: 1;">
+                <label>RG:</label>
+                <input type="text" name="rg">
+            </div>
+            <div class="form-group" style="flex: 1;">
+                <label>Expedição RG:</label>
+                <input type="date" name="rg_expedicao">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Endereço Completo:</label>
+            <input type="text" name="endereco" placeholder="Rua, número, bairro, cidade/UF">
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+            <div class="form-group" style="flex: 1;">
+                <label>CEP:</label>
+                <input type="text" name="cep">
+            </div>
+            <div class="form-group" style="flex: 1;">
+                <label>Telefone/WhatsApp:</label>
+                <input type="tel" name="telefone" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Estado Civil:</label>
+            <select name="estado_civil">
+                <option value="solteiro">Solteiro(a)</option>
+                <option value="casado">Casado(a)</option>
+                <option value="viuvo">Viúvo(a)</option>
+                <option value="divorciado">Divorciado(a)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Nome do Cônjuge (se houver):</label>
+            <input type="text" name="conjuge">
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+            <div class="form-group" style="flex: 1;">
+                <label>Data do Batismo:</label>
+                <input type="date" name="data_batismo">
+            </div>
+            <div class="form-group" style="flex: 1;">
+                <label>Igreja do Batismo:</label>
+                <input type="text" name="igreja_batismo">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Upload Foto Carteirinha:</label>
+            <input type="file" name="foto" accept="image/*">
+        </div>
+
+        <button type="submit">Enviar Cadastro</button>
+    </form>
+</div>
+
+</body>
+</html>
